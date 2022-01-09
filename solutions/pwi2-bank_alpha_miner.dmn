@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_99" name="dmn-movieticket-ageclassification" namespace="http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.2">
+          <semantic:extensionElements/>
+            <semantic:decision id="Decision_f84d2528-94e6-4151-b465-2e69670a8ac9" name="Register Deposit_Record Customer Information_Review Account Status_Propose Account Opening_Confirm Customer Identifier">
+        <semantic:informationRequirement id="InformationRequirement_Check Deposit" >
+        <semantic:requiredInput href="#InputData_Check Deposit" />
+        </semantic:informationRequirement>
+        <semantic:decisionTable id="decisionTable_f84d2528-94e6-4151-b465-2e69670a8ac9">
+      <semantic:input id="input_fbca88f7-7604-43e8-8933-b32b284ff021" label="">
+        <semantic:inputExpression id="inputExpression_838d63ca-c151-4636-aa55-e44cfc78e053" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      
+      <semantic:output id="output_6be8e41e-2db5-452f-bd15-5c5511dafb41" label="" name="" typeRef="string" />
+      <semantic:output id="OutputClause_803e6aae-d5c3-4716-955d-addd98c323f9" typeRef="string"/>
+<semantic:output id="OutputClause_9335b9b9-b5be-4d77-a989-fdf8f61266c4" typeRef="string"/>
+<semantic:output id="OutputClause_e508c549-1063-4642-8d33-47576ca187d9" typeRef="string"/>
+<semantic:output id="OutputClause_d9b8e4a1-93d3-423b-a959-67a53de763ef" typeRef="string"/>
+      <semantic:rule id="DecisionRule_af2a553f-b5e1-461a-8e3e-edb8cefb221a">
+        <semantic:inputEntry id="UnaryTests_99d5fe99-97e5-4716-b9c5-c389fe414989">
+          <semantic:text>Deposit</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="LiteralExpression_c5407ecf-e77e-46a6-8cf6-1d64642cfc98">
+          <semantic:text>AccountDetails</semantic:text>
+        </semantic:outputEntry>
+<semantic:outputEntry id="LiteralExpression_df68739b-b995-43cc-b128-0986cb8dd9c2">
+          <semantic:text>OpeningDate</semantic:text>
+        </semantic:outputEntry>
+<semantic:outputEntry id="LiteralExpression_b3c6c747-7298-455d-a1c3-f5e850a0a2cc">
+          <semantic:text>AccountStatus</semantic:text>
+        </semantic:outputEntry>
+<semantic:outputEntry id="LiteralExpression_dbf0fa7c-b8a2-41b6-9b55-2a6c9910ca97">
+          <semantic:text>CustomerConfirmation</semantic:text>
+        </semantic:outputEntry>
+<semantic:outputEntry id="LiteralExpression_21a466a3-2630-4a0c-9639-981bd1524967">
+          <semantic:text>CustomerIDConfirmationFlag</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+    </semantic:decision>
+<semantic:inputData id="InputData_f76270ab-2464-4ccf-92fa-9867e8931a92" name="Get Customer Coordinates_Build Customer Profile_Retrieve Customer Information" />
+<semantic:inputData id="InputData_Check Deposit" name="Check Deposit" />
+<semantic:knowledgeSource id="KnowledgeSource_startevent" name="solution" />
+<semantic:decision id="Decision_endevent" name="Account opening">
+        <semantic:informationRequirement id="InformationRequirement_f84d2528-94e6-4151-b465-2e69670a8ac9" >
+        <semantic:requiredDecision href="#Decision_f84d2528-94e6-4151-b465-2e69670a8ac9" />
+        </semantic:informationRequirement>
+        <semantic:decisionTable id="decisionTable_endevent">
+      <semantic:input id="input_8292eb54-6927-41a5-8607-cf8e0d64d84e" label="">
+        <semantic:inputExpression id="inputExpression_2ef1a35a-fe0a-4c7b-91a9-ff7c31f6d503" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="InputClause_25693104-e24e-4015-912a-de8ffa0867f3">
+        <semantic:inputExpression id="LiteralExpression_e15ea9be-cfb2-4246-90a7-3b00ae7d99dd" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+<semantic:input id="InputClause_9759939a-2622-4567-adb9-ec5933db1582">
+        <semantic:inputExpression id="LiteralExpression_4c85822f-a949-4703-a829-131ac5d2fd59" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+<semantic:input id="InputClause_f61c1e5f-1f55-4d72-8cf8-f4a02b2786c8">
+        <semantic:inputExpression id="LiteralExpression_5eb77612-2753-457c-95ce-291bd1b62a9d" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+<semantic:input id="InputClause_15386329-2ca3-443a-aabc-69f060f685bf">
+        <semantic:inputExpression id="LiteralExpression_dffc55e7-24c6-499b-89a5-be33fa5c38eb" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="output_3875c5c3-e2c1-428e-b95b-78b9eedea1eb" label="" name="" typeRef="string" />
+      
+      <semantic:rule id="DecisionRule_be70e4f0-4353-4741-8a9a-ed60a01efbb3">
+        <semantic:inputEntry id="UnaryTests_cd20719a-265a-438c-8771-7f3d4880ff38">
+          <semantic:text>AccountDetails</semantic:text>
+        </semantic:inputEntry>
+<semantic:inputEntry id="UnaryTests_47773fed-0848-442a-973e-e9a1e4195210">
+          <semantic:text>OpeningDate</semantic:text>
+        </semantic:inputEntry>
+<semantic:inputEntry id="UnaryTests_2a269f2f-ab8d-4ab2-92f9-68bc18c99cbc">
+          <semantic:text>AccountStatus</semantic:text>
+        </semantic:inputEntry>
+<semantic:inputEntry id="UnaryTests_48976611-d6ac-4714-8048-3dbb57092660">
+          <semantic:text>CustomerConfirmation</semantic:text>
+        </semantic:inputEntry>
+<semantic:inputEntry id="UnaryTests_fc4ee615-43a8-474a-bc12-f94e006fad9e">
+          <semantic:text>CustomerIDConfirmationFlag</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="LiteralExpression_d0dad952-7db4-46f0-bbe7-07c0852daf10">
+          <semantic:text>Account opening</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+    </semantic:decision>
+<semantic:inputData id="InputData_e1529fcb-549d-451e-90f4-ba4a55b00358" name="Analyze Customer Relation" />
+<semantic:inputData id="InputData_b30f1144-d97c-4cc6-93df-184f333f0dda" name="Identify Customer Account Selection" />
+            
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_1">
+            <dmndi:DMNShape id="DMNShape_f84d2528-94e6-4151-b465-2e69670a8ac9" dmnElementRef="Decision_f84d2528-94e6-4151-b465-2e69670a8ac9">
+            <dc:Bounds height="80" width="180" x="0" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_f76270ab-2464-4ccf-92fa-9867e8931a92" dmnElementRef="InputData_f76270ab-2464-4ccf-92fa-9867e8931a92">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_Check Deposit" dmnElementRef="InputData_Check Deposit">
+            <dc:Bounds height="80" width="180" x="0" y="300"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_startevent" dmnElementRef="KnowledgeSource_startevent">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_endevent" dmnElementRef="Decision_endevent">
+            <dc:Bounds height="80" width="180" x="0" y="0"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_e1529fcb-549d-451e-90f4-ba4a55b00358" dmnElementRef="InputData_e1529fcb-549d-451e-90f4-ba4a55b00358">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_b30f1144-d97c-4cc6-93df-184f333f0dda" dmnElementRef="InputData_b30f1144-d97c-4cc6-93df-184f333f0dda">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_f84d2528-94e6-4151-b465-2e69670a8ac9" dmnElementRef="InformationRequirement_f84d2528-94e6-4151-b465-2e69670a8ac9">
+            <di:waypoint x="90.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_Check Deposit" dmnElementRef="InformationRequirement_Check Deposit">
+            <di:waypoint x="90.0" y="300"/>
+            <di:waypoint x="90.0" y="230"/>
+        </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+    
+          </semantic:definitions>
+        

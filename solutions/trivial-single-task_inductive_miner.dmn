@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_99" name="dmn-movieticket-ageclassification" namespace="http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.2">
+          <semantic:extensionElements/>
+            <semantic:knowledgeSource id="KnowledgeSource_startevent" name="start" />
+<semantic:decision id="Decision_endevent" name="end">
+        <semantic:informationRequirement id="InformationRequirement_c1c665b1-1558-4b52-bc18-de9710b7e148" >
+        <semantic:requiredDecision href="#Decision_c1c665b1-1558-4b52-bc18-de9710b7e148" />
+        </semantic:informationRequirement>
+        
+    </semantic:decision>
+<semantic:decision id="Decision_c1c665b1-1558-4b52-bc18-de9710b7e148" name="A">
+        
+        <authorityRequirement id="AuthorityRequirement_startevent">
+        <requiredAuthority href="#KnowledgeSource_startevent" />
+        </authorityRequirement>
+        
+        
+    </semantic:decision>
+            
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_1">
+            <dmndi:DMNShape id="DMNShape_startevent" dmnElementRef="KnowledgeSource_startevent">
+            <dc:Bounds height="80" width="180" x="0" y="300"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_endevent" dmnElementRef="Decision_endevent">
+            <dc:Bounds height="80" width="180" x="0" y="0"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_c1c665b1-1558-4b52-bc18-de9710b7e148" dmnElementRef="Decision_c1c665b1-1558-4b52-bc18-de9710b7e148">
+            <dc:Bounds height="80" width="180" x="0" y="150"/>
+        </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_startevent" dmnElementRef="AuthorityRequirement_startevent">
+            <di:waypoint x="90.0" y="300"/>
+            <di:waypoint x="90.0" y="230"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_c1c665b1-1558-4b52-bc18-de9710b7e148" dmnElementRef="InformationRequirement_c1c665b1-1558-4b52-bc18-de9710b7e148">
+            <di:waypoint x="90.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+    
+          </semantic:definitions>
+        

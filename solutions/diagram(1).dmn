@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="definitions_055edml" name="definitions" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.2">
+  <decision id="decision_00c70jl" name="A">
+    <authorityRequirement id="AuthorityRequirement_0gk35zb">
+      <requiredAuthority href="#KnowledgeSource_15gal2i" />
+    </authorityRequirement>
+    <decisionTable id="decisionTable_12ranzr">
+      <input id="input1" label="">
+        <inputExpression id="inputExpression1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output24" label="" name="" typeRef="string" />
+      <output id="OutputClause_07mewp3" typeRef="string" />
+      <output id="OutputClause_03pffbk" typeRef="string" />
+      <output id="OutputClause_0q71su5" typeRef="string" />
+      <output id="OutputClause_03yqe0a" typeRef="string" />
+      <output id="OutputClause_0inv33j" typeRef="string" />
+      <rule id="DecisionRule_1nqdyrc">
+        <inputEntry id="UnaryTests_118zhyx">
+          <text>A</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0936caw">
+          <text>B</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w9r4k6">
+          <text>C</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y6dc64">
+          <text>D</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ff020d">
+          <text>F</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b4odmq">
+          <text>G</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gvhbfb">
+          <text>D</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <knowledgeSource id="KnowledgeSource_15gal2i" name="start" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1rivdkf">
+      <dmndi:DMNShape id="DMNShape_0d3cdxo" dmnElementRef="decision_00c70jl">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0dgrd14" dmnElementRef="KnowledgeSource_15gal2i">
+        <dc:Bounds height="63" width="100" x="200" y="209" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0l2ivmu" dmnElementRef="AuthorityRequirement_0gk35zb">
+        <di:waypoint x="250" y="209" />
+        <di:waypoint x="250" y="160" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

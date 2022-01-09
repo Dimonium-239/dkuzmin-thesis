@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_99" name="dmn-movieticket-ageclassification" namespace="http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.2">
+          <semantic:extensionElements/>
+            <semantic:knowledgeSource id="KnowledgeSource_startevent" name="Goods Request" />
+<semantic:decision id="Decision_endevent" name="end">
+        <semantic:informationRequirement id="InformationRequirement_bb97b88e-b6cc-4973-8817-c983d28f1d05" >
+        <semantic:requiredDecision href="#Decision_bb97b88e-b6cc-4973-8817-c983d28f1d05" />
+        </semantic:informationRequirement>
+        <semantic:decisionTable id="decisionTable_endevent">
+      <semantic:input id="input_c9a13fc8-fd99-4f0e-86d7-5308b02c4af7" label="">
+        <semantic:inputExpression id="inputExpression_eece09d2-a3dc-4b03-a317-abab07db2999" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      
+      <semantic:output id="output_10717ebf-8ffc-4ab7-8bad-7871fb928757" label="" name="" typeRef="string" />
+      
+      <semantic:rule id="DecisionRule_87fd08fb-da6a-4345-8e04-fc846f37d55b">
+        <semantic:inputEntry id="UnaryTests_bebba15e-5c55-4abf-8057-2b229a68e9a0">
+          <semantic:text>Goods Request</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="LiteralExpression_f83b9bd7-0536-4212-b96f-fbf152a51ab5">
+          <semantic:text>End</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+    </semantic:decision>
+<semantic:decision id="Decision_bb97b88e-b6cc-4973-8817-c983d28f1d05" name="Check Inventory">
+        
+        <authorityRequirement id="AuthorityRequirement_startevent">
+        <requiredAuthority href="#KnowledgeSource_startevent" />
+        </authorityRequirement>
+        
+        <semantic:decisionTable id="decisionTable_bb97b88e-b6cc-4973-8817-c983d28f1d05">
+      <semantic:input id="input_04d5bf0f-4324-40af-b415-a0610676b9e5" label="">
+        <semantic:inputExpression id="inputExpression_e2d65287-456d-4b15-ac75-154f63a84b65" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      
+      <semantic:output id="output_e3d8e5c5-6f68-4aee-ae34-491064c2f468" label="" name="" typeRef="string" />
+      
+      <semantic:rule id="DecisionRule_eb029ab0-27e5-4122-a07f-ecb998995c95">
+        <semantic:inputEntry id="UnaryTests_a35022f6-8ce1-47ce-b3fa-d5f4bad41623">
+          <semantic:text>_</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="LiteralExpression_871e714e-7693-459f-b9d7-8ec800ae7c60">
+          <semantic:text>Goods Request</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+    </semantic:decision>
+            
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_1">
+            <dmndi:DMNShape id="DMNShape_startevent" dmnElementRef="KnowledgeSource_startevent">
+            <dc:Bounds height="80" width="180" x="0" y="300"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_endevent" dmnElementRef="Decision_endevent">
+            <dc:Bounds height="80" width="180" x="0" y="0"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_bb97b88e-b6cc-4973-8817-c983d28f1d05" dmnElementRef="Decision_bb97b88e-b6cc-4973-8817-c983d28f1d05">
+            <dc:Bounds height="80" width="180" x="0" y="150"/>
+        </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_startevent" dmnElementRef="AuthorityRequirement_startevent">
+            <di:waypoint x="90.0" y="300"/>
+            <di:waypoint x="90.0" y="230"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_bb97b88e-b6cc-4973-8817-c983d28f1d05" dmnElementRef="InformationRequirement_bb97b88e-b6cc-4973-8817-c983d28f1d05">
+            <di:waypoint x="90.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+    
+          </semantic:definitions>
+        

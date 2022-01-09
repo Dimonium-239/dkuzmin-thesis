@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_99" name="dmn-movieticket-ageclassification" namespace="http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.2">
+          <semantic:extensionElements/>
+            <semantic:knowledgeSource id="KnowledgeSource_startevent" name="y" />
+<semantic:decision id="Decision_endevent" name="V">
+        <semantic:informationRequirement id="InformationRequirement_bef53925-3c21-4063-8538-46f680a1c4ca" >
+        <semantic:requiredDecision href="#Decision_bef53925-3c21-4063-8538-46f680a1c4ca" />
+        </semantic:informationRequirement>
+<semantic:informationRequirement id="InformationRequirement_d16195a9-c525-4c3b-9625-6e1b3d003bfb" >
+        <semantic:requiredInput href="#InputData_d16195a9-c525-4c3b-9625-6e1b3d003bfb" />
+        </semantic:informationRequirement>
+        <semantic:decisionTable id="decisionTable_endevent">
+      <semantic:input id="input_647ce882-a301-4858-ac11-1bdf1d221110" label="">
+        <semantic:inputExpression id="inputExpression_68098b2f-dd71-4742-a759-faab2c0de385" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:input id="InputClause_53f2a763-4194-4acb-81bf-1aa7f6b43157">
+        <semantic:inputExpression id="LiteralExpression_ce4581d0-591b-42ba-a9e6-d248f6c910ef" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="output_218c99aa-eb48-46a4-9a60-743a9f014cd7" label="" name="" typeRef="string" />
+      
+      <semantic:rule id="DecisionRule_23d5e7c0-cf5d-441c-b6ce-c6f9fdde668e">
+        <semantic:inputEntry id="UnaryTests_2c38b411-3023-4c9b-8f08-b2f1a3ffea9e">
+          <semantic:text>y</semantic:text>
+        </semantic:inputEntry>
+<semantic:inputEntry id="UnaryTests_e3681ea2-a11b-411f-addb-eac1b1d9585e">
+          <semantic:text>x</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="LiteralExpression_d4c324d0-a069-4e04-8ae7-cca602d485fb">
+          <semantic:text>V</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+    </semantic:decision>
+<semantic:decision id="Decision_bef53925-3c21-4063-8538-46f680a1c4ca" name="B">
+        
+        <authorityRequirement id="AuthorityRequirement_startevent">
+        <requiredAuthority href="#KnowledgeSource_startevent" />
+        </authorityRequirement>
+        
+        <semantic:decisionTable id="decisionTable_bef53925-3c21-4063-8538-46f680a1c4ca">
+      <semantic:input id="input_fabc0608-9748-40a4-9e10-77d9f969ce4f" label="">
+        <semantic:inputExpression id="inputExpression_3b642f39-b077-47de-b328-36152fa17eea" typeRef="string">
+          <semantic:text></semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      
+      <semantic:output id="output_77c7bff2-1211-46d0-993f-470139f1ec28" label="" name="" typeRef="string" />
+      
+      <semantic:rule id="DecisionRule_5f3aa9b7-9027-43cd-9eb5-8d6647fdb39d">
+        <semantic:inputEntry id="UnaryTests_49ceeb61-f8ad-434a-8d74-d2456cea8fe5">
+          <semantic:text>_</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="LiteralExpression_047dc2fe-1a26-4f67-9aab-55a2e0806d79">
+          <semantic:text>y</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+    </semantic:decision>
+<semantic:inputData id="InputData_d16195a9-c525-4c3b-9625-6e1b3d003bfb" name="C" />
+            
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_1">
+            <dmndi:DMNShape id="DMNShape_startevent" dmnElementRef="KnowledgeSource_startevent">
+            <dc:Bounds height="80" width="180" x="-125.0" y="300"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_endevent" dmnElementRef="Decision_endevent">
+            <dc:Bounds height="80" width="180" x="0" y="0"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_bef53925-3c21-4063-8538-46f680a1c4ca" dmnElementRef="Decision_bef53925-3c21-4063-8538-46f680a1c4ca">
+            <dc:Bounds height="80" width="180" x="-125.0" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_d16195a9-c525-4c3b-9625-6e1b3d003bfb" dmnElementRef="InputData_d16195a9-c525-4c3b-9625-6e1b3d003bfb">
+            <dc:Bounds height="80" width="180" x="125.0" y="150"/>
+        </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_startevent" dmnElementRef="AuthorityRequirement_startevent">
+            <di:waypoint x="-35.0" y="300"/>
+            <di:waypoint x="-35.0" y="230"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_bef53925-3c21-4063-8538-46f680a1c4ca" dmnElementRef="InformationRequirement_bef53925-3c21-4063-8538-46f680a1c4ca">
+            <di:waypoint x="-35.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_d16195a9-c525-4c3b-9625-6e1b3d003bfb" dmnElementRef="InformationRequirement_d16195a9-c525-4c3b-9625-6e1b3d003bfb">
+            <di:waypoint x="215.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+    
+          </semantic:definitions>
+        

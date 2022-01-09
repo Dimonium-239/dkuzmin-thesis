@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_99" name="dmn-movieticket-ageclassification" namespace="http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.2">
+          <semantic:extensionElements/>
+            <semantic:knowledgeSource id="KnowledgeSource_startevent" name="start" />
+<semantic:decision id="Decision_endevent" name="end">
+        <semantic:informationRequirement id="InformationRequirement_e217e874-3abf-4bf3-847c-497eaf53e3a9" >
+        <semantic:requiredInput href="#InputData_e217e874-3abf-4bf3-847c-497eaf53e3a9" />
+        </semantic:informationRequirement>
+<semantic:informationRequirement id="InformationRequirement_ff1bab29-a851-43d6-bb59-31537635e882" >
+        <semantic:requiredDecision href="#Decision_ff1bab29-a851-43d6-bb59-31537635e882" />
+        </semantic:informationRequirement>
+<semantic:informationRequirement id="InformationRequirement_e2836746-fc35-4e36-ae86-a2c5c3a83539" >
+        <semantic:requiredInput href="#InputData_e2836746-fc35-4e36-ae86-a2c5c3a83539" />
+        </semantic:informationRequirement>
+        
+    </semantic:decision>
+<semantic:inputData id="InputData_e217e874-3abf-4bf3-847c-497eaf53e3a9" name="C-CalculateCD" />
+<semantic:decision id="Decision_ff1bab29-a851-43d6-bb59-31537635e882" name="D-CalculateDD">
+        <semantic:informationRequirement id="InformationRequirement_b4464877-0a1f-41b0-940b-48868d67150c" >
+        <semantic:requiredDecision href="#Decision_b4464877-0a1f-41b0-940b-48868d67150c" />
+        </semantic:informationRequirement>
+        
+    </semantic:decision>
+<semantic:decision id="Decision_d50460f7-5474-4fd7-8e3c-206b86fc6bcc" name="A-Enter">
+        
+        <authorityRequirement id="AuthorityRequirement_startevent">
+        <requiredAuthority href="#KnowledgeSource_startevent" />
+        </authorityRequirement>
+        
+        
+    </semantic:decision>
+<semantic:decision id="Decision_b4464877-0a1f-41b0-940b-48868d67150c" name="B-CalculateBP">
+        <semantic:informationRequirement id="InformationRequirement_d50460f7-5474-4fd7-8e3c-206b86fc6bcc" >
+        <semantic:requiredDecision href="#Decision_d50460f7-5474-4fd7-8e3c-206b86fc6bcc" />
+        </semantic:informationRequirement>
+        
+    </semantic:decision>
+<semantic:inputData id="InputData_e2836746-fc35-4e36-ae86-a2c5c3a83539" name="E-CalculateOD" />
+            
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_1">
+            <dmndi:DMNShape id="DMNShape_startevent" dmnElementRef="KnowledgeSource_startevent">
+            <dc:Bounds height="80" width="180" x="-125.0" y="600"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_endevent" dmnElementRef="Decision_endevent">
+            <dc:Bounds height="80" width="180" x="0" y="0"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_e217e874-3abf-4bf3-847c-497eaf53e3a9" dmnElementRef="InputData_e217e874-3abf-4bf3-847c-497eaf53e3a9">
+            <dc:Bounds height="80" width="180" x="-375.0" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_ff1bab29-a851-43d6-bb59-31537635e882" dmnElementRef="Decision_ff1bab29-a851-43d6-bb59-31537635e882">
+            <dc:Bounds height="80" width="180" x="-125.0" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_d50460f7-5474-4fd7-8e3c-206b86fc6bcc" dmnElementRef="Decision_d50460f7-5474-4fd7-8e3c-206b86fc6bcc">
+            <dc:Bounds height="80" width="180" x="-125.0" y="450"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_b4464877-0a1f-41b0-940b-48868d67150c" dmnElementRef="Decision_b4464877-0a1f-41b0-940b-48868d67150c">
+            <dc:Bounds height="80" width="180" x="-125.0" y="300"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_e2836746-fc35-4e36-ae86-a2c5c3a83539" dmnElementRef="InputData_e2836746-fc35-4e36-ae86-a2c5c3a83539">
+            <dc:Bounds height="80" width="180" x="125.0" y="150"/>
+        </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_startevent" dmnElementRef="AuthorityRequirement_startevent">
+            <di:waypoint x="-35.0" y="600"/>
+            <di:waypoint x="-35.0" y="530"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_e217e874-3abf-4bf3-847c-497eaf53e3a9" dmnElementRef="InformationRequirement_e217e874-3abf-4bf3-847c-497eaf53e3a9">
+            <di:waypoint x="-285.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_ff1bab29-a851-43d6-bb59-31537635e882" dmnElementRef="InformationRequirement_ff1bab29-a851-43d6-bb59-31537635e882">
+            <di:waypoint x="-35.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_d50460f7-5474-4fd7-8e3c-206b86fc6bcc" dmnElementRef="InformationRequirement_d50460f7-5474-4fd7-8e3c-206b86fc6bcc">
+            <di:waypoint x="-35.0" y="450"/>
+            <di:waypoint x="-35.0" y="380"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_b4464877-0a1f-41b0-940b-48868d67150c" dmnElementRef="InformationRequirement_b4464877-0a1f-41b0-940b-48868d67150c">
+            <di:waypoint x="-35.0" y="300"/>
+            <di:waypoint x="-35.0" y="230"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_e2836746-fc35-4e36-ae86-a2c5c3a83539" dmnElementRef="InformationRequirement_e2836746-fc35-4e36-ae86-a2c5c3a83539">
+            <di:waypoint x="215.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+    
+          </semantic:definitions>
+        

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_99" name="dmn-movieticket-ageclassification" namespace="http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.2">
+          <semantic:extensionElements/>
+            <semantic:decision id="Decision_Check Deposit" name="Check Deposit">
+        <semantic:informationRequirement id="InformationRequirement_d605a7a8-ce05-416c-84e2-9c43ae9cb5b1" >
+        <semantic:requiredInput href="#InputData_d605a7a8-ce05-416c-84e2-9c43ae9cb5b1" />
+        </semantic:informationRequirement>
+        
+    </semantic:decision>
+<semantic:knowledgeSource id="KnowledgeSource_startevent" name="start" />
+<semantic:inputData id="InputData_bf39af1b-637b-484b-b181-8376cc71a291" name="Get Customer Coordinates_Build Customer Profile_Retrieve Customer Information" />
+<semantic:inputData id="InputData_e255a81f-eef9-4f76-8997-4e6bf63a4b36" name="Identify Customer Account Selection" />
+<semantic:inputData id="InputData_d605a7a8-ce05-416c-84e2-9c43ae9cb5b1" name="Register Deposit" />
+<semantic:decision id="Decision_endevent" name="end">
+        <semantic:informationRequirement id="InformationRequirement_ce68e532-f3f5-49f1-8915-cfe6c2dd64d1" >
+        <semantic:requiredDecision href="#Decision_ce68e532-f3f5-49f1-8915-cfe6c2dd64d1" />
+        </semantic:informationRequirement>
+        
+    </semantic:decision>
+<semantic:decision id="Decision_ce68e532-f3f5-49f1-8915-cfe6c2dd64d1" name="Prepare Account Opening Document">
+        <semantic:informationRequirement id="InformationRequirement_Check Deposit" >
+        <semantic:requiredDecision href="#Decision_Check Deposit" />
+        </semantic:informationRequirement>
+        
+    </semantic:decision>
+<semantic:inputData id="InputData_a697b547-055c-4030-93d7-9af52bffb393" name="Analyze Customer Relation" />
+            
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_1">
+            <dmndi:DMNShape id="DMNShape_Check Deposit" dmnElementRef="Decision_Check Deposit">
+            <dc:Bounds height="80" width="180" x="0" y="300"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_startevent" dmnElementRef="KnowledgeSource_startevent">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_bf39af1b-637b-484b-b181-8376cc71a291" dmnElementRef="InputData_bf39af1b-637b-484b-b181-8376cc71a291">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_e255a81f-eef9-4f76-8997-4e6bf63a4b36" dmnElementRef="InputData_e255a81f-eef9-4f76-8997-4e6bf63a4b36">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_d605a7a8-ce05-416c-84e2-9c43ae9cb5b1" dmnElementRef="InputData_d605a7a8-ce05-416c-84e2-9c43ae9cb5b1">
+            <dc:Bounds height="80" width="180" x="0" y="450"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_endevent" dmnElementRef="Decision_endevent">
+            <dc:Bounds height="80" width="180" x="0" y="0"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_ce68e532-f3f5-49f1-8915-cfe6c2dd64d1" dmnElementRef="Decision_ce68e532-f3f5-49f1-8915-cfe6c2dd64d1">
+            <dc:Bounds height="80" width="180" x="0" y="150"/>
+        </dmndi:DMNShape>
+<dmndi:DMNShape id="DMNShape_a697b547-055c-4030-93d7-9af52bffb393" dmnElementRef="InputData_a697b547-055c-4030-93d7-9af52bffb393">
+            <dc:Bounds height="80" width="180" x="150" y="150"/>
+        </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_Check Deposit" dmnElementRef="InformationRequirement_Check Deposit">
+            <di:waypoint x="90.0" y="300"/>
+            <di:waypoint x="90.0" y="230"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_d605a7a8-ce05-416c-84e2-9c43ae9cb5b1" dmnElementRef="InformationRequirement_d605a7a8-ce05-416c-84e2-9c43ae9cb5b1">
+            <di:waypoint x="90.0" y="450"/>
+            <di:waypoint x="90.0" y="380"/>
+        </dmndi:DMNEdge>
+<dmndi:DMNEdge id="DMNEdge_ce68e532-f3f5-49f1-8915-cfe6c2dd64d1" dmnElementRef="InformationRequirement_ce68e532-f3f5-49f1-8915-cfe6c2dd64d1">
+            <di:waypoint x="90.0" y="150"/>
+            <di:waypoint x="90.0" y="80"/>
+        </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+    
+          </semantic:definitions>
+        
